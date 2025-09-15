@@ -15,8 +15,17 @@ public class Main {
         System.out.println("How many do you want to buy?");
         int amount = scanner.nextInt();
 
+        customer.buyItem(name, amount);
         customer.goToSupermarket(superMarket);
         customer.buyItem(name, amount);
+
+//        Dit kan ook
+        customer.buyItem("cheese", 2);
+
+//        Deze moeten foutmeldingen geven
+        customer.buyItem("fruit", 200);
+        customer.buyItem("beer", 24);
+
 
     }
 }

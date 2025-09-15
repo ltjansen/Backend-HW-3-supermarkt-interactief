@@ -11,6 +11,13 @@ public class Customer {
     }
 
     public void buyItem(String product, int amount){
+
+//        Check eerst of de klant al een supermarkt heeft gekozen, anders kun je niet verder
+        if(superMarket == null){
+            System.out.println("Select a supermarket to go to first");
+            return;
+        }
+
         if(product.equals("bread")){
             superMarket.buyBread(amount);
         } else if(product.equals("cheese")){

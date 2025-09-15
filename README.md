@@ -91,6 +91,8 @@ __Bijvoorbeeld:__
 - als productName gelijk is aan "bread"
 - roep dan superMarket.buyBread aan
 
+> Tip: De eerste van de if-statements moet checken of 'this.superMarket` null is. Als dat zo is, dan print je de waarschuwing "Select a supermarket to go to first" en return je de methode.
+
 ### Stap 7
 Alles komt samen in de Main klasse.  
 Maak een `public static void main` methode, als die er nog niet is.  
