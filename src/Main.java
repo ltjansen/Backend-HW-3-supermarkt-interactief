@@ -19,13 +19,6 @@ public class Main {
         customer.goToSupermarket(superMarket);
         customer.buyItem(name, amount);
 
-//        Dit kan ook
-        customer.buyItem("cheese", 2);
-
-//        Deze moeten foutmeldingen geven
-        customer.buyItem("fruit", 200);
-        customer.buyItem("beer", 24);
-
 
     }
 }
