@@ -8,4 +8,10 @@ public class Product {
         this.price = price;
         this.amount = amount;
     }
+
+    public boolean equalsIgnoreCase(String productName) {
+        return false;
+    }
+
+
 }
