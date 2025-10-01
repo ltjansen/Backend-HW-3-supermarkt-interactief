@@ -18,25 +18,17 @@ public class Customer {
             return;
         }
 
+//        // dit heb ik uiteindelijk ook niet meer goed werkend gekregen//
         for (Product product : superMarket.products) {
             if (product.equalsIgnoreCase(productName)) {
                 superMarket.buyItem(product, amount);
                 return;
+//            } else if (!product.equals(productName)) {
+//                continue;
             } else {
                 System.out.println(superMarket + " does not sell " + productName);
             }
         }
 
-//        if(product.equals("bread")){
-//            superMarket.buyBread(amount);
-//        } else if(product.equals("cheese")){
-//            superMarket.buyCheese(amount);
-//        } else if(product.equals("fruit")){
-//            superMarket.buyFruit(amount);
-//        } else if (product.equals("toilet paper")) {
-//            superMarket.buyToiletPaper(amount);
-//        } else {
-//            System.out.println("We do not sell this item");
-//        }
     }
 }

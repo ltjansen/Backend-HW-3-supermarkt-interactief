@@ -22,21 +22,23 @@ public class SuperMarket {
             product.amount -= amount;
             System.out.println("You bought " + amount + " " + product.name + " for " +  product.price * amount + " euro.");
         } else {
-            System.err.println("You cannot buy " + amount + " " + product.name + ", we have only " + product.amount + " " + product.name + " in stock");
+            System.err.println("You cannot buy " + amount + " " + product.name + ", we have only " + product.amount + " " + product.name + " in stock.");
         }
     }
 
     public void restockItem(String productName, int amount) {
         for (Product product : this.products) {
             if (product.name.equalsIgnoreCase(productName)) {
-                amount += product.amount;
+                System.out.println("The new stock amount of " + productName + " in " + this.name + " is: " + (amount += product.amount));
                 return;
+            } else if (!product.name.equals(productName)) {
+                continue;
             } else {
                 System.out.println(this.name + " does not sell " + productName);
             }
         }
-    }
 
+    }
 }
 
 
