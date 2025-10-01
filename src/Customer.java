@@ -10,7 +10,7 @@ public class Customer {
         this.superMarket = superMarket;
     }
 
-    public void buyItem(String product, int amount){
+    public void buyItem(String productName, int amount){
 
 //        Check eerst of de klant al een supermarkt heeft gekozen, anders kun je niet verder
         if(superMarket == null){
@@ -18,16 +18,25 @@ public class Customer {
             return;
         }
 
-        if(product.equals("bread")){
-            superMarket.buyBread(amount);
-        } else if(product.equals("cheese")){
-            superMarket.buyCheese(amount);
-        } else if(product.equals("fruit")){
-            superMarket.buyFruit(amount);
-        } else if (product.equals("toilet paper")) {
-            superMarket.buyToiletPaper(amount);
-        } else {
-            System.out.println("We do not sell this item");
+        for (Product product : superMarket.products) {
+            if (product.equalsIgnoreCase(productName)) {
+                superMarket.buyItem(product, amount);
+                return;
+            } else {
+                System.out.println(superMarket + " does not sell " + productName);
+            }
         }
+
+//        if(product.equals("bread")){
+//            superMarket.buyBread(amount);
+//        } else if(product.equals("cheese")){
+//            superMarket.buyCheese(amount);
+//        } else if(product.equals("fruit")){
+//            superMarket.buyFruit(amount);
+//        } else if (product.equals("toilet paper")) {
+//            superMarket.buyToiletPaper(amount);
+//        } else {
+//            System.out.println("We do not sell this item");
+//        }
     }
 }
